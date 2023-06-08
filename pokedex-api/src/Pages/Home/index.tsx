@@ -25,9 +25,7 @@ export function Home() {
                         types
                     }
 
-                
 
-                    
                 })
 
             )
