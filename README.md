@@ -8,4 +8,4 @@ https://www.figma.com/file/THLxZSlOoUYMZrjFg0Kl1M/Pok%C3%A9dex?type=design&node-
 
 # Abrindo a aplicação
 Abra o terminal dentro da pasta principal e digite
-'''expo start'''
+```expo start```
