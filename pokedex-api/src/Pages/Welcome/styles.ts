@@ -7,14 +7,47 @@ export const Container = styled.View`
     ${({ theme }) => css`
 
     flex: 1;
-    background-color: ${theme.colors.background};
+    background-color: ${theme.colors.backgroundWater};
+
     `}
 `;
 
 // Elementos do Content
 export const Content = styled.View`
+    ${({ theme }) => css`
+        justify-content: center;
+        align-items: center;
+
+        height: 70%;
+    `}
+`;
+
+export const WrapperAnimation = styled.View`
+    ${({ theme }) => css`
+        width: 200px;
+        height: 300px;
+        background-color: ${theme.colors.types.water};
+        border-radius: 100px;
+
+        justify-content: center;
+        align-items: center;
+        transform: rotate(30deg);
+
+    `}
+
+
+`;
+
+export const WrapperImage = styled.View`
+    ${({ theme }) => css`
     
-    height: 70%;
+    transform: rotate(-30deg);
+
+
+    `}    
+
+
+
 `;
 
 
@@ -22,31 +55,35 @@ export const Content = styled.View`
 export const Footer = styled.View`
     ${({ theme }) => css`
 
-        justify-content: center;
-        align-items: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 30%;
+    background-color: ${theme.colors.background};
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 
-        border-top-right-radius: 20px;
-        border-top-left-radius: 20px;
-        height: 30%;
-        background-color: ${theme.colors.backgroundWater};
+
+
     `}
 `;
 
 
 export const Title = styled.Text`
-    ${({theme}) => css`
-        font-size: 20px;
+    ${({ theme }) => css`
+        font-size: 40px;
         color: ${theme.colors.texto_branco};
+        margin-top: 20px
 
     `}
 
 `;
 
 export const SubTitle = styled.Text`
-    ${({theme}) => css`
+    ${({ theme }) => css`
 
         margin-top: 20px;
-        font-size: 14px;
+        font-size: 16px;
         color: ${theme.colors.texto_branco};
 
     `}
