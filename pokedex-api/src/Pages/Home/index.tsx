@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import api from '../../service/api'
 import * as S from './styles'
+import { Text } from "react-native";
 
 
 type PokemonType ={
@@ -23,6 +24,9 @@ type Request = {
 
 // Tela Inicial com o GIF do Squirtle
 export function Home() {
+
+
+    const [pokemons, setPokemons] = useState<Pokemon[]>([])
 
 
     useEffect(() => {
@@ -48,7 +52,7 @@ export function Home() {
             )
 
 
-            console.log(payloadPokemons)
+                setPokemons(payloadPokemons)
 
         }
 
@@ -68,6 +72,6 @@ export function Home() {
 
 
     return <S.Container>
-
+        {pokemons.map(item => <Text>{item.name}</Text>)}
     </S.Container>
 }
