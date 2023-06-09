@@ -84,7 +84,7 @@ export const SubTitle = styled.Text`
 
         margin-top: 20px;
         font-size: 16px;
-        color: ${theme.colors.texto_branco};
+        color: ${theme.colors.text_white};
 
     `}
 

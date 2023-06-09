@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import api from '../../service/api'
 import * as S from './styles'
-import { Text } from "react-native";
+import { Card } from "../../components/Card";
 
 
 type PokemonType ={
@@ -72,6 +72,9 @@ export function Home() {
 
 
     return <S.Container>
-        {pokemons.map(item => <Text>{item.name}</Text>)}
+        {pokemons.map((item) =>
+            <Card/>
+        
+        )}
     </S.Container>
 }
