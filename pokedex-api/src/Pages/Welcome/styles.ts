@@ -72,7 +72,7 @@ export const Footer = styled.View`
 export const Title = styled.Text`
     ${({ theme }) => css`
         font-size: 40px;
-        color: ${theme.colors.texto_branco};
+        color: ${theme.colors.text};
         margin-top: 20px
 
     `}
