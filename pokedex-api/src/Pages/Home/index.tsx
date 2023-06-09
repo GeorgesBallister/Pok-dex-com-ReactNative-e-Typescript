@@ -3,6 +3,23 @@ import api from '../../service/api'
 import * as S from './styles'
 
 
+type PokemonType ={
+    type: String
+
+}
+
+type Pokemon ={
+    name: string
+    id: number
+    url: string
+    types: PokemonType[]
+}
+
+
+type Request = {
+    id: number
+    types: PokemonType[]
+}
 
 // Tela Inicial com o GIF do Squirtle
 export function Home() {
@@ -16,7 +33,7 @@ export function Home() {
 
             const payloadPokemons = await Promise.all(
 
-                results.map(async pokemon => {
+                results.map(async (pokemon: Pokemon) => {
                     const { id, types } = await getMoreInfo(pokemon.url)
 
                     return {
@@ -40,7 +57,7 @@ export function Home() {
     }, [])
 
 
-    async function getMoreInfo(url: string) {
+    async function getMoreInfo(url: string): Promise<Request> {
         const response = await api.get(url)
         const { id, types } = response.data;
 
